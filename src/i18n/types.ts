@@ -1,0 +1,288 @@
+export type LanguageCode = 'en' | 'de' | 'fr' | 'es' | 'ur';
+
+export type TextDirection = 'ltr' | 'rtl';
+
+export interface LanguageOption {
+  code: LanguageCode;
+  name: string;
+  nativeName: string;
+  dir: TextDirection;
+  flag: string;
+}
+
+export const SUPPORTED_LANGUAGES: LanguageOption[] = [
+  { code: 'en', name: 'English', nativeName: 'English', dir: 'ltr', flag: '🇺🇸' },
+  { code: 'de', name: 'German', nativeName: 'Deutsch', dir: 'ltr', flag: '🇩🇪' },
+  { code: 'fr', name: 'French', nativeName: 'Français', dir: 'ltr', flag: '🇫🇷' },
+  { code: 'es', name: 'Spanish', nativeName: 'Español', dir: 'ltr', flag: '🇪🇸' },
+  { code: 'ur', name: 'Urdu', nativeName: 'اردو', dir: 'rtl', flag: '🇵🇰' },
+];
+
+export interface Translations {
+  common: {
+    appName: string;
+    tagline: string;
+    detected: string;
+    createdBy: string;
+    authorName: string;
+    searchPlaceholder: string;
+    install: string;
+    installed: string;
+    refresh: string;
+    refreshing: string;
+    logs: string;
+    terminalLogs: string;
+    switchThemeLight: string;
+    switchThemeDark: string;
+    changeLanguage: string;
+    close: string;
+    cancel: string;
+    confirm: string;
+    delete: string;
+    save: string;
+    copy: string;
+    copied: string;
+    loading: string;
+    version: string;
+    size: string;
+    tap: string;
+    license: string;
+    cask: string;
+    formula: string;
+    leaf: string;
+    pinned: string;
+    outdated: string;
+    update: string;
+    upgrade: string;
+    uninstall: string;
+    pin: string;
+    unpin: string;
+    actions: string;
+    all: string;
+    status: string;
+    type: string;
+    name: string;
+    diskUsage: string;
+    noDescription: string;
+    quickSearch: string;
+    affectedItems: string;
+    uninstallAll: string;
+    confirmUpgradeTitle: string;
+    confirmUpgradeDesc: string;
+    confirmUninstallTitle: string;
+    confirmUninstallDesc: string;
+    confirmBatchUninstallTitle: string;
+    confirmBatchUninstallDesc: string;
+    warningRequiredBy: string;
+    packagesCount: string;
+  };
+  nav: {
+    installed: string;
+    updates: string;
+    services: string;
+    leaves: string;
+    taps: string;
+    doctor: string;
+    cleanup: string;
+    brewfile: string;
+  };
+  tabTitles: {
+    installed: { title: string; subtitle: string };
+    updates: { title: string; subtitle: string };
+    services: { title: string; subtitle: string };
+    leaves: { title: string; subtitle: string };
+    taps: { title: string; subtitle: string };
+    doctor: { title: string; subtitle: string };
+    cleanup: { title: string; subtitle: string };
+    brewfile: { title: string; subtitle: string };
+  };
+  packages: {
+    filterPlaceholder: string;
+    all: string;
+    formulae: string;
+    casks: string;
+    outdatedFilter: string;
+    leavesFilter: string;
+    pinnedFilter: string;
+    sortName: string;
+    sortSize: string;
+    sortStatus: string;
+    sortType: string;
+    ascending: string;
+    descending: string;
+    selectAll: string;
+    selectedCount: string;
+    batchUpgrade: string;
+    batchUninstall: string;
+    noPackagesFound: string;
+    noMatchingFilter: string;
+    clearSearch: string;
+    gridView: string;
+    listView: string;
+  };
+  details: {
+    installedVersion: string;
+    latestVersion: string;
+    packageType: string;
+    homepage: string;
+    revealInFinder: string;
+    dependencies: string;
+    dependents: string;
+    requiredBy: string;
+    caveats: string;
+    analytics: string;
+    analytics30d: string;
+    analytics90d: string;
+    analytics365d: string;
+    installOnRequest: string;
+    installedVersions: string;
+    switchVersion: string;
+    switching: string;
+    active: string;
+    zapCask: string;
+    zapCaskDesc: string;
+    confirmUninstallTitle: string;
+    confirmUninstallDesc: string;
+    confirmUpgradeTitle: string;
+    confirmUpgradeDesc: string;
+    infoTab: string;
+    treeTab: string;
+  };
+  installModal: {
+    title: string;
+    subtitle: string;
+    placeholder: string;
+    searchBtn: string;
+    directInstall: string;
+    searching: string;
+    noResults: string;
+    alreadyInstalled: string;
+    updateAvailable: string;
+    installAction: string;
+  };
+  updates: {
+    title: string;
+    subtitle: string;
+    upgradeAll: string;
+    checkForUpdates: string;
+    checking: string;
+    upgrading: string;
+    allUpToDate: string;
+    allUpToDateDesc: string;
+    pendingCount: string;
+    formulaeToUpgrade: string;
+    casksToUpgrade: string;
+    upgradeSelected: string;
+  };
+  services: {
+    title: string;
+    subtitle: string;
+    runningCount: string;
+    stoppedCount: string;
+    errorCount: string;
+    start: string;
+    stop: string;
+    restart: string;
+    userService: string;
+    rootService: string;
+    noServices: string;
+    noServicesDesc: string;
+  };
+  taps: {
+    title: string;
+    subtitle: string;
+    externalReposCount: string;
+    addTap: string;
+    addNewTap: string;
+    adding: string;
+    popularTaps: string;
+    popularSuggestions: string;
+    repoNameLabel: string;
+    tapActionBtn: string;
+    official: string;
+    thirdParty: string;
+    untap: string;
+    placeholder: string;
+    noTaps: string;
+    noTapsDesc: string;
+    confirmUntapTitle: string;
+    confirmUntapDesc: string;
+    confirmUntapMessage: string;
+  };
+  doctor: {
+    title: string;
+    subtitle: string;
+    runDiagnostics: string;
+    running: string;
+    diagnosing: string;
+    allGoodTitle: string;
+    allGoodDesc: string;
+    issuesFound: string;
+    potentialWarnings: string;
+    noDiagnosticsYet: string;
+    noDiagnosticsDesc: string;
+    warnings: string;
+    errors: string;
+    helpText: string;
+  };
+  cleanup: {
+    title: string;
+    subtitle: string;
+    reclaimableSpace: string;
+    dryRun: string;
+    dryRunning: string;
+    runCleanup: string;
+    running: string;
+    cleanNow: string;
+    smartRulesTitle: string;
+    purgeBottles: string;
+    purgeBottlesDesc: string;
+    prune30Days: string;
+    prune30DaysDesc: string;
+    autoCleanExit: string;
+    autoCleanExitDesc: string;
+    noCleanupNeeded: string;
+    noCleanupDesc: string;
+    scanReclaimableSpace: string;
+    allCleanTitle: string;
+    allCleanDesc: string;
+    obsoleteItemsCount: string;
+    pruneAllCaches: string;
+    filesToRemove: string;
+    cleanupSuccess: string;
+  };
+  brewfile: {
+    title: string;
+    subtitle: string;
+    saveBrewfile: string;
+    saved: string;
+    copyClipboard: string;
+    copy: string;
+    copied: string;
+    regenerate: string;
+    generateBrewfile: string;
+    generating: string;
+    shareSetup: string;
+    savedTo: string;
+    noBrewfileYet: string;
+    noBrewfileDesc: string;
+    brewfileOutput: string;
+    duplicateMacSetup: string;
+    duplicateMacDesc: string;
+    scanQrCode: string;
+    includeCasks: string;
+    includeTaps: string;
+    includeServices: string;
+    describePackages: string;
+    exportSuccess: string;
+    copySuccess: string;
+  };
+  commandPalette: {
+    placeholder: string;
+    navigation: string;
+    actions: string;
+    packages: string;
+    noResults: string;
+    quickJump: string;
+  };
+}
